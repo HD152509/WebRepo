@@ -1,0 +1,129 @@
+@CHARSET "utf-8";
+
+.texting { margin-bottom: 30px; position: relative; background-color:black;}
+
+h1 { padding-top:20px;text-align:center;color: #c9d0d4; font-family: 'Helvetica Neue', sans-serif; font-size: 46px; font-weight: 100; line-height: 50px; letter-spacing: 1px; padding: 0 0 40px; border-bottom: double #555; }
+
+p {text-align:center; color: #bbc3c8; font-family: 'Verdana', sans-serif; font-size: 16px; line-height: 26px; text-indent: 30px; margin: 0; }
+    
+body{
+	background-color:#E0FFFF;
+}
+
+div.blogTitle{
+ 	background-color: #F5FFFA ;
+ 	border :1px solid white;
+}
+    
+h2{
+	padding-top : 24px;	
+	padding-bottom : 8px;
+	font-family:'Poppins';
+	text-align:center;
+}
+
+nav.navbar.navbar-expand-lg.navbar-light{
+	background-color: #e3f2fd;
+}
+
+button{
+	float:right;
+	padding-right:50px;
+	}
+	
+button.btn.btn-dark{
+	margin-left:5px;
+}
+
+#navs {
+margin:0 auto;
+list-style:none;
+}
+	
+#nav li{
+float:left;
+}
+
+
+#navs a{
+	display:block;
+	text-align:center;
+	width:150px;
+	font-size:20px;
+	font-family:'Poppins';
+}
+
+#loginForm{
+	float:right;
+	padding-right:100px;
+}
+
+.wrapper{
+	background-color:black;
+} 
+
+.main{
+	padding-top : 80px;
+	padding-bottom : 20px;
+	text-align:center;
+	font-size:40px;
+	color:dark;
+	text-decoration:none;
+}
+
+div.container{
+	position: absoulte;
+	margin : auto;
+	}
+	
+
+.nav-item active .nav-link{
+color:#ff0f00;
+}
+
+
+.f-navbarSupportedContent{ z-index: 9999; position: fixed; top: 0; width: 100%;}
+
+
+span{
+	font-size:30px;
+	font-family:'Malgun Gothic';
+	color:white;
+	}
+	
+#Span_1{
+	position:absolute;
+	top:800px;
+	left:150px;
+}
+
+#Span_2{
+	position:absolute;
+	top:1400px;
+	left:150px;
+}
+
+#Span_3{
+	position:absolute;
+	 top:2350px;
+	 left:150px;
+}
+	
+img.menu_img{
+	margin-top:5px;
+}
+
+div.toTop{
+	margin-top:20px;
+	background-color:#F0F8FF;
+}
+
+p.toTopText{
+	text-align:center;
+}
+
+a.toTopAnchor{
+	font-size:20px;
+	color:black;
+	text-decoration:none;
+}

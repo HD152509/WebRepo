@@ -100,18 +100,15 @@
     		console.log(id,pwd);
     		
     		//서버로 post 전송(jquery 문법을 이용한 ajax 호출)
-    		
-    		// http://127.0.0.1:8080/WebClass/html/menu.html 에서 테스트
-    		
     		$.post("/WebClass/login",
     					{ "id" : id, "pwd" : pwd},
-    					function(data){
+    					function(data.id){
     						
-    						//alert(data.id + '님 로그인되었습니다.');
+    						//alert(data.form.id + '님 로그인되었습니다.');
     						
     						var myModal = $('#myModal');
     						myModal.modal();
-    						myModal.find('.modal-body').text(data.id + '님 로그인되었습니다.'); //data.form.id -> data.id
+    						myModal.find('.modal-body').text(data.id + '님 로그인되었습니다.');
     						
     					});
     		
