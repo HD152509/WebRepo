@@ -20,7 +20,7 @@
 	//out.println("<h1>hello, "+name+"</h1>");
 %>
 <%-- 5. Expression tag --%>
-<h1>Hello,<%=name%></h1> <%-- 표현식에서는 절대 마지막에 ; 를 붙이지 않는다 --%>
+<h1>Hello,<%=name%>, Welcome!</h1> <%-- 표현식에서는 절대 마지막에 ; 를 붙이지 않는다 --%>
 	
 </body>
 </html>
