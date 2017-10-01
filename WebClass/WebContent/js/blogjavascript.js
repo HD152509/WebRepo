@@ -60,16 +60,17 @@
 	  e.style.color="#000000"
   }
   
-  function logged(e){
-	  var ID = document.getElementById("id").value;
-	  var PWD = document.getElementById("pwd").value;
-	  if(e.innerHTML=='로그아웃'){
+  function logged(){
+	  //var ID = document.getElementById("id").value;
+	  //var PWD = document.getElementById("pwd").value;
+	  /*if(e.innerHTML=='로그아웃'){
 		  alert("로그아웃되셨습니다.");
 		  location.reload();
 	  }
 	  else if((ID!=""&&PWD!="")&&(e.innerHTML=='로그인')){
 		  e.innerHTML='로그아웃';
-	  }
+	  }*/
+	  location.href='';
   }
   
   function signup(){
