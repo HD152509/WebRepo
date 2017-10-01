@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
     <ul class="navbar-nav mr-auto">
       <li class="nav-item" onmouseover="menu_over(this);" onmouseout="menu_out(this);">
-        <a class="nav-link" href="../html/a.html">menu1</a> <!-- sr-only -> screenreader -->
+        <a class="nav-link" href="/WebClass/session">menu1</a> <!-- sr-only -> screenreader --> <!-- sessionInfo은 로그인해야만 볼수있는 메뉴!! -->
       </li>
       <li class="nav-item" onmouseover="menu_over(this);" onmouseout="menu_out(this);">
         <a class="nav-link" href="../html/p.html">menu2</a>

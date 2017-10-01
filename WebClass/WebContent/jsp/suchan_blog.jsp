@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -12,19 +14,17 @@
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 	
-	<!-- nav바 상단고정 -->
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<!-- #hash 움직이는 스크롤 smooth -->
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 	
 	
 	
-    <script src = "../js/blogjavascript.js"></script>  <!-- 외부 js 파일 - 전체 사이트 디자인 -->
+    <script src = "../js/blogjavascript.js"></script>
   
-  	<link rel="stylesheet" type = "text/css" href="../css/blogstyle.css"> <!-- 외부 css 파일 - 전체 사이트 디자인 -->
+  	<link rel="stylesheet" type = "text/css" href="../css/blogstyle.css">
 	
   </head>
   
@@ -71,8 +71,6 @@
 </nav>
 
 
-<!--  여기부터 content -->
-
 <div class="wrapper">
 
 	<img src="../image/sea2.jpg" alt="Main">
@@ -95,11 +93,8 @@
 </div>
 	
 <div class="toTop">
-<p class="toTopText"><a class="toTopAnchor" href = "#">- 맨 위로 -</a></p>
+<p class="toTopText"><a class="toTopAnchor" href = "#">- 맨위로 -</a></p>
 </div>
-    
-
-<!--  content 끝  -->
     
     
     <!-- ajax path -->
@@ -130,7 +125,7 @@
   </div>
 </div>
 
-	<script src = "../js/blogjavascript1.js"></script>  <!-- 외부 js 파일 -->
+	<script src = "../js/blogjavascript1.js"></script>
 
   </body>
 </html>
