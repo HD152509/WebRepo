@@ -10,16 +10,26 @@
 <link rel="stylesheet" href="/WebClass/css/signin.css">
 </head>
 <body>
+<%
+	String id=request.getParameter("id");
+	String pwd=request.getParameter("pwd");
+	String name=request.getParameter("name");
+	String nickname=request.getParameter("nickname");
+	if(id==null) id="";
+	if(pwd==null) pwd="";
+	if(name==null) name="";
+	if(nickname==null) nickname="";
+%>
 <div class="container">
 
   <form class="form-signin" action="/WebClass/login" method="post">
     <h2 class="form-signin-heading">Please sign in</h2>
     
     <label for="inputEmail" class="sr-only">Email address</label>
-    <input type="email" name="id" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+    <input type="email" value="<%=id%>" name="id" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
     
     <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" name="pwd" id="inputPassword" class="form-control" placeholder="Password" required>
+    <input type="password" value="<%=pwd%>" name="pwd" id="inputPassword" class="form-control" placeholder="Password" required>
 
     <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
   </form>
