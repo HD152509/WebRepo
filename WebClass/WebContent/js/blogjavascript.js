@@ -70,7 +70,7 @@
 	  else if((ID!=""&&PWD!="")&&(e.innerHTML=='로그인')){
 		  e.innerHTML='로그아웃';
 	  }*/
-	  location.href='';
+	  location.href='/WebClass/bloglogin';
   }
   
   function signup(){
