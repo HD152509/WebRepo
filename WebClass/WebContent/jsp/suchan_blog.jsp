@@ -62,8 +62,8 @@
       </li>
     </ul>
   <form class="form-inline my-2 my-lg-0" id="loginForm">
-  	<input class="form-control mr-sm-2" type="text" placeholder="Id" aria-label="ID" id="id" required>
-    <input class="form-control mr-sm-2" type="text" placeholder="Password" aria-label="PWD" id="pwd" required>
+  	<!--  <input class="form-control mr-sm-2" type="text" placeholder="Id" aria-label="ID" id="id" required> -->
+    <!--  <input class="form-control mr-sm-2" type="text" placeholder="Password" aria-label="PWD" id="pwd" required> -->
   	<button type="submit" class="btn btn-primary" id="log" onclick="logged();">로그인</button>
   	<button type="button" class="btn btn-dark" onclick="signup();">회원가입</button>
   </form>
