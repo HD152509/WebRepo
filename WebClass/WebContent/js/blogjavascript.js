@@ -74,15 +74,16 @@
   }
   
   function signup(){
-	  
+	  /*
       var e = document.getElementById("log").innerHTML;
       
       if(e=='로그아웃'){
     	  alert("로그아웃을 한후에 진행해주세요.");
     	  return;
-      }
+      }*/
       
 	  alert("회원가입창으로 이동합니다.");
+	  
 	  location.href='blog_signup.html';
   }
   

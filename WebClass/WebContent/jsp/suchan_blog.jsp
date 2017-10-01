@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="org.dimigo.vo.UserVO" %>
+
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -61,12 +63,28 @@
         </div>
       </li>
     </ul>
-  <form class="form-inline my-2 my-lg-0" id="loginForm">
-  	<!--  <input class="form-control mr-sm-2" type="text" placeholder="Id" aria-label="ID" id="id" required> -->
-    <!--  <input class="form-control mr-sm-2" type="text" placeholder="Password" aria-label="PWD" id="pwd" required> -->
+    
+    
+  <div class="form-inline my-2 my-lg-0" id="loginForm">
+  <!--  <input class="form-control mr-sm-2" type="text" placeholder="Id" aria-label="ID" id="id" required> -->
+  <!--  <input class="form-control mr-sm-2" type="text" placeholder="Password" aria-label="PWD" id="pwd" required> -->
+  <%-- 세션에 사용자 정보가 없는 경우 --%>
+    <%
+    	UserVO user = (UserVO) session.getAttribute("user"); //String이니까 userVO타입으로 타입캐스팅해서 받아줘야함
+    	if(user==null){ // 아직 노 로그인이면
+    %>
   	<button type="submit" class="btn btn-primary" id="log" onclick="logged();">로그인</button>
   	<button type="button" class="btn btn-dark" onclick="signup();">회원가입</button>
-  </form>
+  	<% }
+    	
+    else { %>
+    
+    <%-- 세션에 사용자 정보가 있는 경우 --%>
+	    	<%=user.getName()+"님 환영합니다." %>
+	      	<form action="/WebClass/bloglogout" method="post"> 
+	      	<button type="submit">로그아웃</button>
+	      	</form>	    
+	 <% }  %>
   </div>
 </nav>
 
