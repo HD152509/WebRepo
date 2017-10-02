@@ -22,24 +22,11 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 	
-	<%
-	UserVO user = (UserVO) session.getAttribute("user");
-	if(user==null){
-
-	%>
-    <script src = "../js/blogjavascript.js"></script>
+	
+    <script src = "http://hd152509.run.goorm.io/WebClass/js/blogjavascript.js"></script>
   
-  	<link rel="stylesheet" type = "text/css" href="../css/blogstyle.css">
+  	<link rel="stylesheet" type = "text/css" href="http://hd152509.run.goorm.io/WebClass/css/blogstyle.css">
   	
-  	<%
-	}else{
-	%>
-	<script src = "js/blogjavascript.js"></script>
-  
-  	<link rel="stylesheet" type = "text/css" href="css/blogstyle.css">
-	<%
-	}
-	%>
 	
   </head>
   
@@ -83,6 +70,7 @@
   <!--  <input class="form-control mr-sm-2" type="text" placeholder="Password" aria-label="PWD" id="pwd" required> -->
   <%-- 세션에 사용자 정보가 없는 경우 --%>
     <%
+		UserVO user = (UserVO) session.getAttribute("user");
     	if(user==null){ // 아직 노 로그인이면
     %>
   	<button type="submit" class="btn btn-primary" id="log" onclick="logged();">로그인</button>
@@ -105,53 +93,24 @@
 
 
 <div class="wrapper">
-	<%
-	if(user==null){
 
-	%>
-    <img src="../image/sea2.jpg" alt="Main">
+    <img src="http://hd152509.run.goorm.io/WebClass/image/sea2.jpg" alt="Main">
     
     <div class="imgTopic">
-	<a href="#Dream"><img class="menu_img" id="Dream" src="../image/security.jpg" alt="Dream" onclick="Add_Text1();">
+	<a href="#Dream"><img class="menu_img" id="Dream" src="http://hd152509.run.goorm.io/WebClass/image/security.jpg" alt="Dream" onclick="Add_Text1();">
 	<span id="Span_1"></span></a>
 	</div>
 	
 	<div class="imgTopic">
-	<a href="#Hobby"><img class="menu_img" id="Hobby" src="../image/exercising.jpg" alt="Hobby" onclick="Add_Text2();">
+	<a href="#Hobby"><img class="menu_img" id="Hobby" src="http://hd152509.run.goorm.io/WebClass/image/exercising.jpg" alt="Hobby" onclick="Add_Text2();">
 	<span id="Span_2"></span></a>
 	</div>
 	
 	<div class="imgTopic">
-	<a href="#Favorite"><img class="menu_img" id="Favorite" src="../image/reading.jpg" alt="Favorite" onclick="Add_Text3();">
+	<a href="#Favorite"><img class="menu_img" id="Favorite" src="http://hd152509.run.goorm.io/WebClass/image/reading.jpg" alt="Favorite" onclick="Add_Text3();">
 	<span id="Span_3"></span></a>
 	</div>
   	
-  	<%
-	}else{
-	%>
-	<img src="image/sea2.jpg" alt="Main">
-	
-	<div class="imgTopic">
-	<a href="#Dream"><img class="menu_img" id="Dream" src="image/security.jpg" alt="Dream" onclick="Add_Text1();">
-	<span id="Span_1"></span></a>
-	</div>
-	
-	<div class="imgTopic">
-	<a href="#Hobby"><img class="menu_img" id="Hobby" src="image/exercising.jpg" alt="Hobby" onclick="Add_Text2();">
-	<span id="Span_2"></span></a>
-	</div>
-	
-	<div class="imgTopic">
-	<a href="#Favorite"><img class="menu_img" id="Favorite" src="image/reading.jpg" alt="Favorite" onclick="Add_Text3();">
-	<span id="Span_3"></span></a>
-	</div>
-	<%
-	}
-	%>
-
-	
-	
-	
 	
 </div>
 	
@@ -188,17 +147,8 @@
   </div>
 </div>
 -->    
-	<%
-	if(user==null){
-	%>
-    <script src = "../js/blogjavascript1.js"></script>  	
-  	<%
-	}else{
-	%>
-	<script src = "js/blogjavascript1.js"></script>
-	<%
-	}
-	%>
+	
+    <script src = "http://hd152509.run.goorm.io/WebClass/js/blogjavascript1.js"></script>  	
 	
 
   </body>
