@@ -45,10 +45,12 @@ public class BlogLoginServlet extends HttpServlet {
 		
 		System.out.printf("id : %s, pwd : %s\n", id, pwd);
 		
-		// 이부분 수정
+		boolean result = false;
 		
+		if(id.equals("test@naver.com")) result=true;
 		
-		boolean result = true;
+		System.out.println("result : " + result);
+				
 		if(result){
 			HttpSession session = request.getSession();
 			UserVO user = new UserVO();

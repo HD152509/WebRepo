@@ -22,11 +22,24 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 	
-	
-	
+	<%
+	UserVO user = (UserVO) session.getAttribute("user");
+	if(user==null){
+
+	%>
     <script src = "../js/blogjavascript.js"></script>
   
   	<link rel="stylesheet" type = "text/css" href="../css/blogstyle.css">
+  	
+  	<%
+	}else{
+	%>
+	<script src = "js/blogjavascript.js"></script>
+  
+  	<link rel="stylesheet" type = "text/css" href="css/blogstyle.css">
+	<%
+	}
+	%>
 	
   </head>
   
@@ -70,7 +83,6 @@
   <!--  <input class="form-control mr-sm-2" type="text" placeholder="Password" aria-label="PWD" id="pwd" required> -->
   <%-- 세션에 사용자 정보가 없는 경우 --%>
     <%
-    	UserVO user = (UserVO) session.getAttribute("user"); //String이니까 userVO타입으로 타입캐스팅해서 받아줘야함
     	if(user==null){ // 아직 노 로그인이면
     %>
   	<button type="submit" class="btn btn-primary" id="log" onclick="logged();">로그인</button>
@@ -81,19 +93,25 @@
     
     <%-- 세션에 사용자 정보가 있는 경우 --%>
 	    	<%=user.getName()+"님 환영합니다." %>
-	      	<form action="/WebClass/bloglogout" method="post"> 
+	    	<div>
+	    	<form action="/WebClass/bloglogout" method="post"> 
 	      	<button type="submit">로그아웃</button>
-	      	</form>	    
+	      	</form>
+	      	</div>
 	 <% }  %>
+  </div>
   </div>
 </nav>
 
 
 <div class="wrapper">
+	<%
+	if(user==null){
 
-	<img src="../image/sea2.jpg" alt="Main">
-	
-	<div class="imgTopic">
+	%>
+    <img src="../image/sea2.jpg" alt="Main">
+    
+    <div class="imgTopic">
 	<a href="#Dream"><img class="menu_img" id="Dream" src="../image/security.jpg" alt="Dream" onclick="Add_Text1();">
 	<span id="Span_1"></span></a>
 	</div>
@@ -107,6 +125,33 @@
 	<a href="#Favorite"><img class="menu_img" id="Favorite" src="../image/reading.jpg" alt="Favorite" onclick="Add_Text3();">
 	<span id="Span_3"></span></a>
 	</div>
+  	
+  	<%
+	}else{
+	%>
+	<img src="image/sea2.jpg" alt="Main">
+	
+	<div class="imgTopic">
+	<a href="#Dream"><img class="menu_img" id="Dream" src="image/security.jpg" alt="Dream" onclick="Add_Text1();">
+	<span id="Span_1"></span></a>
+	</div>
+	
+	<div class="imgTopic">
+	<a href="#Hobby"><img class="menu_img" id="Hobby" src="image/exercising.jpg" alt="Hobby" onclick="Add_Text2();">
+	<span id="Span_2"></span></a>
+	</div>
+	
+	<div class="imgTopic">
+	<a href="#Favorite"><img class="menu_img" id="Favorite" src="image/reading.jpg" alt="Favorite" onclick="Add_Text3();">
+	<span id="Span_3"></span></a>
+	</div>
+	<%
+	}
+	%>
+
+	
+	
+	
 	
 </div>
 	
@@ -117,13 +162,13 @@
     
     <!-- ajax path -->
     
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<!--  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     
     <!-- ajax path -->
     
-    
+<!--
 <div class="modal" id="myModal">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -142,8 +187,19 @@
     </div>
   </div>
 </div>
-
-	<script src = "../js/blogjavascript1.js"></script>
+-->    
+	<%
+	if(user==null){
+	%>
+    <script src = "../js/blogjavascript1.js"></script>  	
+  	<%
+	}else{
+	%>
+	<script src = "js/blogjavascript1.js"></script>
+	<%
+	}
+	%>
+	
 
   </body>
 </html>

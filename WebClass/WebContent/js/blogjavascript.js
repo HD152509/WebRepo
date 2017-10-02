@@ -82,9 +82,9 @@
     	  return;
       }*/
       
-	  alert("회원가입창으로 이동합니다.");
+	  alert("회원가입창으로 이동합니다!!");
 	  
-	  location.href='blog_signup.html';
+	  location.href='blog_signup.jsp';
   }
   
   function Add_Text1(){
