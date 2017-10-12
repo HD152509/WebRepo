@@ -83,7 +83,7 @@
 	    	<%=user.getName()+"님 환영합니다." %>
 	    	<div>
 	    	<form action="/WebClass/bloglogout" method="post"> 
-	      	<button type="submit">로그아웃</button>
+	      	<button type="submit" class="btn btn-dark">로그아웃</button>
 	      	</form>
 	      	</div>
 	 <% }  %>

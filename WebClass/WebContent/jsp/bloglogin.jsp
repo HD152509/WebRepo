@@ -14,7 +14,7 @@
 	String id=request.getParameter("id");
 	String pwd=request.getParameter("pwd");
 	if(id==null) id="";
-	if(pwd==null) pwd="";
+	//if(pwd==null) pwd="";
 %>
 <div class="container">
 
@@ -25,7 +25,7 @@
     <input type="email" value="<%=id%>" name="id" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
     
     <label for="inputPassword" class="sr-only">비밀번호</label>
-    <input type="password" value="<%=pwd%>"name="pwd" id="inputPassword" class="form-control" placeholder="Password" required>
+    <input type="password" value=""name="pwd" id="inputPassword" class="form-control" placeholder="Password" required>
 
     <button class="btn btn-lg btn-primary btn-block" type="submit">로그인</button>
   </form>
